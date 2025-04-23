@@ -15,7 +15,7 @@ export function StoryToolbar({ onAdd }: StoryToolbarProps) {
   return (
     <>
       {/* Main toolbar */}
-      <div className="mx-3 my-2 p-3 z-10 bg-white rounded-lg flex items-center">
+      <div className="my-2 py-3 md:mx-3 md:px-3 bg-white rounded-lg flex items-center">
         {/* Spacer */}
         <div className="flex-1" />
 

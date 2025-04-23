@@ -11,8 +11,8 @@ interface TopbarProps {
 export function Topbar({ onToggleSidebar }: TopbarProps) {
   return (
     <header className="flex z-10 items-center h-[74px] justify-between px-4 shadow-lg bg-white">
-      {/* Left: mobile menu + back arrow + title */}
-      <div className="flex items-center gap-4">
+      {/* Left section */}
+      <div className="flex items-center gap-4 flex-1">
         <button
           className="md:hidden p-2 rounded hover:bg-muted transition-colors"
           onClick={onToggleSidebar}
@@ -26,9 +26,8 @@ export function Topbar({ onToggleSidebar }: TopbarProps) {
       </div>
 
       {/* Right: profile card */}
-      <div className="flex items-center mr-8">
+      <div className="flex items-center flex-shrink-0 ml-2 md:ml-0 md:mr-8">
         <div className="flex items-center gap-3 bg-gray-50 border border-indigo-50 rounded-2xl px-2 md:px-4 py-2">
-          {/* Avatar with purple background */}
           <div className="w-10 h-10 rounded-xl flex items-center justify-center">
             <Image
               src="/avatars/a66e3c587b925507a17595d38b9654c3a4847f76.png"
@@ -38,16 +37,12 @@ export function Topbar({ onToggleSidebar }: TopbarProps) {
               className="rounded-sm object-cover"
             />
           </div>
-
-          {/* Text - hidden on mobile */}
           <div className="hidden md:block text-left">
             <p className="text-xs text-indigo-950">Welcome back,</p>
             <p className="text-sm font-semibold text-indigo-950">
               Akshita Patel
             </p>
           </div>
-
-          {/* Chevron - always visible */}
           <ChevronDown size={22} className="text-indigo-950 md:ml-20 ml-2" />
         </div>
       </div>

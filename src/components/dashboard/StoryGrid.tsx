@@ -124,7 +124,8 @@ export function StoryGrid() {
     <div
       className="
         grid 
-        px-5
+        md:px-5
+        sm:px-0
         grid-cols-[repeat(auto-fit,minmax(340px,1fr))] 
         justify-center 
         gap-6
