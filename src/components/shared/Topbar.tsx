@@ -27,7 +27,7 @@ export function Topbar({ onToggleSidebar }: TopbarProps) {
 
       {/* Right: profile card */}
       <div className="flex items-center mr-8">
-        <div className="flex items-center gap-3 bg-gray-50 border border-indigo-50 rounded-2xl px-4 py-2">
+        <div className="flex items-center gap-3 bg-gray-50 border border-indigo-50 rounded-2xl px-2 md:px-4 py-2">
           {/* Avatar with purple background */}
           <div className="w-10 h-10 rounded-xl flex items-center justify-center">
             <Image
@@ -39,16 +39,16 @@ export function Topbar({ onToggleSidebar }: TopbarProps) {
             />
           </div>
 
-          {/* Text */}
-          <div className="text-left">
+          {/* Text - hidden on mobile */}
+          <div className="hidden md:block text-left">
             <p className="text-xs text-indigo-950">Welcome back,</p>
             <p className="text-sm font-semibold text-indigo-950">
               Akshita Patel
             </p>
           </div>
 
-          {/* Chevron */}
-          <ChevronDown size={22} className="text-indigo-950 ml-20" />
+          {/* Chevron - always visible */}
+          <ChevronDown size={22} className="text-indigo-950 md:ml-20 ml-2" />
         </div>
       </div>
     </header>
